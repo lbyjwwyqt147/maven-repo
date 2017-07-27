@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata modelVersion="1.1.0">
-  <groupId>security-authentication-share</groupId>
+  <groupId>com.repo.authentication</groupId>
   <artifactId>security-authentication-share</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20170727.080055</timestamp>
+      <timestamp>20170727.104537</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20170727080055</lastUpdated>
+    <lastUpdated>20170727104537</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>0.0.1-20170727.080055-1</value>
-        <updated>20170727080055</updated>
+        <value>0.0.1-20170727.104537-1</value>
+        <updated>20170727104537</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>0.0.1-20170727.080055-1</value>
-        <updated>20170727080055</updated>
+        <value>0.0.1-20170727.104537-1</value>
+        <updated>20170727104537</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
