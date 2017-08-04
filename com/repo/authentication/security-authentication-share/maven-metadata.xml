@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <groupId>com.repo.authentication</groupId>
+  <groupId>authentication</groupId>
   <artifactId>security-authentication-share</artifactId>
   <versioning>
     <versions>
       <version>0.0.1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20170727104537</lastUpdated>
+    <lastUpdated>20170804084952</lastUpdated>
   </versioning>
 </metadata>
