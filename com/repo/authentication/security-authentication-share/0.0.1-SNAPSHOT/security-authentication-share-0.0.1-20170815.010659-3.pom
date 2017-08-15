@@ -1,0 +1,277 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.repo.authentication</groupId>
+  <artifactId>security-authentication-share</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>security-authentication-share</name>
+  <description/>
+  <properties>
+    <webVersion>3.1</webVersion>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- git 打包需要 配置 -->
+    <github.global.server>github</github.global.server>
+  </properties>
+
+  
+  <dependencies>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>7.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.web</groupId>
+      <artifactId>javax.servlet.jsp.jstl</artifactId>
+      <version>1.2.2</version>
+    </dependency>
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	    <version>3.5</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpclient</artifactId>
+	    <version>4.5.3</version>
+	</dependency>
+	
+	<!-- Spring boot 需要的包开始 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>1.5.6.RELEASE</version>
+        <exclusions>  
+            <!-- 先排除starter-logging（因为springboot默认使用的logback框架） -->
+	        <exclusion>  
+	            <groupId>org.springframework.boot</groupId>  
+	            <artifactId>spring-boot-starter-logging</artifactId>  
+	        </exclusion>  
+	    </exclusions> 
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <version>1.5.6.RELEASE</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- Spring boot 需要的包结束 -->
+    
+	<!-- aop 开始 -->
+	<dependency>
+     	<groupId>org.springframework.boot</groupId>
+     	<artifactId>spring-boot-starter-aop</artifactId>
+     	<version>1.5.6.RELEASE</version>
+    </dependency>
+    <dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjrt</artifactId>
+	    <version>1.8.10</version>
+	</dependency>
+	<!-- aop 结束 -->
+	
+    <!-- log4j 日志包开始 -->  
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-log4j2</artifactId>
+	    <version>1.5.6.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.fasterxml.jackson.dataformat</groupId>
+	    <artifactId>jackson-dataformat-yaml</artifactId>
+	    <version>2.9.0.pr4</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-nosql</artifactId>
+	    <version>2.8.2</version>
+	</dependency>
+
+	<!-- log4j 日志包结束-->
+	
+    <!-- mysql 驱动开始 -->
+    <dependency>
+         <groupId>mysql</groupId>
+         <artifactId>mysql-connector-java</artifactId>
+          <version>6.0.6</version>
+    </dependency>
+    <dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>druid</artifactId>
+	    <version>1.0.29</version>
+	</dependency>
+    <!-- mysql 驱动结束 -->
+    
+    <!-- mybatais 开始 -->
+   <dependency>
+	    <groupId>org.mybatis.spring.boot</groupId>
+	    <artifactId>mybatis-spring-boot-starter</artifactId>
+	    <version>1.3.0</version>
+	</dependency>
+	<dependency>
+      <groupId>tk.mybatis</groupId>
+      <artifactId>mapper-spring-boot-starter</artifactId>
+      <version>1.1.0</version>
+    </dependency>
+	<dependency>
+	    <groupId>com.github.pagehelper</groupId>
+	    <artifactId>pagehelper-spring-boot-starter</artifactId>
+	    <version>1.1.0</version>
+	</dependency>
+    <!-- mybatais 结束 -->
+       
+    <!-- json处理工具包开始 -->
+      <dependency>
+         <groupId>com.alibaba</groupId>
+         <artifactId>fastjson</artifactId>
+         <version>1.2.31</version>
+	</dependency>
+	<!-- json处理工具包结束 -->
+	
+	<!-- 集成redis包 开始 -->
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-redis</artifactId>
+	    <version>1.4.6.RELEASE</version>
+	</dependency>
+	<!-- 集成redis包 结束 -->
+	
+	<!-- spring-security 认证包 开始 -->
+     <dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-security</artifactId>
+	    <version>1.5.6.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-taglibs</artifactId>
+	    <version>4.2.3.RELEASE</version>
+	</dependency>
+	<!-- spring-security 认证包 结束 -->
+	
+	<!-- 对象复制 -->
+	<dependency>
+	    <groupId>net.sf.dozer</groupId>
+	    <artifactId>dozer</artifactId>
+	    <version>5.5.1</version>
+	</dependency>
+	
+  </dependencies>
+ 
+  
+  <build>
+    <!-- 打包名称 -->
+    <finalName>security-authentication-share</finalName>
+    
+    <plugins>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-compiler-plugin</artifactId>
+         <version>3.6.1</version>
+         <configuration>
+             <source>1.8</source>
+             <target>1.8</target>
+             <encoding>UTF-8</encoding>
+         </configuration>
+      </plugin>
+     <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+      
+      <!-- 打包到git 插件配置 开始 -->
+     <!--  <plugin>
+		    <artifactId>maven-deploy-plugin</artifactId>
+		    <version>2.8.2</version>
+		    <configuration>
+		    <altDeploymentRepository>internal.repository::default::file://${project.build.directory}/maven-repository</altDeploymentRepository>
+		    </configuration>
+	  </plugin> -->
+	  
+	  
+	  <plugin>
+	    <artifactId>maven-deploy-plugin</artifactId>
+	    <version>2.8.2</version>
+	    <configuration>
+	    <altDeploymentRepository>internal.repo::default::file://D:/mvn_repo</altDeploymentRepository>
+	    </configuration>
+	 </plugin>
+	  
+	  
+	<!--   <plugin> 
+		  <groupId>com.github.github</groupId>  
+		  <artifactId>site-maven-plugin</artifactId>  
+		  <version>0.12</version>  
+		  <configuration> 
+		    <message>Maven artifacts for ${project.version}</message>  
+		    <noJekyll>true</noJekyll>  
+		    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>  
+		    <branch>refs/heads/mvn-repo</branch>  
+		    <includes> 
+		      <include>**/*</include> 
+		    </includes>  
+		    <repositoryName>maven-repo</repositoryName>  
+		    对应github上创建的仓库名称 name  
+		    <repositoryOwner>lbyjwwyqt147</repositoryOwner>  
+		    github 仓库所有者 
+		  </configuration>  
+		  <executions> 
+		    <execution> 
+		      <goals> 
+		        <goal>site</goal> 
+		      </goals>  
+		      <phase>deploy</phase> 
+		    </execution> 
+		  </executions> 
+	</plugin> -->
+	  
+	<!--   <plugin> 
+		  <groupId>com.github.github</groupId>  
+		  <artifactId>site-maven-plugin</artifactId>  
+		  <version>0.12</version>  
+		  <configuration> 
+		    <message>Maven artifacts for ${project.version}</message>  
+		    <noJekyll>true</noJekyll>  
+		    <outputDirectory>${project.build.directory}/maven-repository</outputDirectory>  
+		    <branch>refs/heads/master</branch>  
+		    <includes> 
+		      <include>**/*</include> 
+		    </includes>  
+		    <repositoryName>maven-repository</repositoryName>  
+		    对应github上创建的仓库名称 name  
+		    <repositoryOwner>lbyjwwyqt147</repositoryOwner>  
+		    github 仓库所有者 
+		  </configuration>  
+		  <executions> 
+		    <execution> 
+		      <goals> 
+		        <goal>site</goal> 
+		      </goals>  
+		      <phase>deploy</phase> 
+		    </execution> 
+		  </executions> 
+	 </plugin> -->
+	 <!-- 打包到git 插件配置 结束 --> 
+	  
+    </plugins>
+  </build>
+  
+  
+    <!-- 将包打到git上需要的配置 开始 -->
+ <!--  <distributionManagement>
+    <repository>
+        <id>internal.repository</id>
+        <name>Temporary Staging Repository</name>
+        <url>file://${project.build.directory}/maven-repository</url>
+    </repository>
+  </distributionManagement> -->
+  <!-- 将包打到git上需要的配置 结束 -->
+  
+  
+</project>
